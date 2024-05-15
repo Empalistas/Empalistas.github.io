@@ -1,0 +1,471 @@
+/* MAIN */
+body {
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+img, 
+h1 {
+    pointer-events: none;
+}
+
+/* BARS */
+.redbar {
+    height: 5px;
+    width: 6rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.spreader-bar {
+    background-color: black;
+}
+
+/* Extra decorations */
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+.link-decoration {
+    text-decoration: none;
+    color: white;
+}
+
+.link-decoration:hover,
+.link-decoration:focus {
+    color: white;
+}
+
+.color-franquicia {
+    color: aqua !important;
+    transition: color 0.5s ease;
+}
+
+.color-franquicia.white {
+    color: white !important;
+}
+
+.small-image {
+    max-width: 100%;
+    height: auto;
+    min-width: 50%;
+}
+
+/* BGs */
+.bg-color-navbar {
+    background-color: #a15a18;
+}
+
+.bg-color-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f99c37;
+    z-index: -2;
+}
+
+.bg-color-empanadas {
+    background-color: #da5626;
+}
+
+.bg-color-pizzas {
+    background-color: #191a1c;
+}
+
+.bg-color-footpage {
+    background-color: #5e5e5e;
+}
+
+.bg-color-postfp {
+    background-color: #191a1c;
+}
+
+.top-empanadas {
+    background-image: url('images/TopEmp.webp');
+}
+
+.bot-empanadas {
+    background-image: url('images/BotEmp.webp');
+}
+
+.bg-whatsapp {
+    background-image: url('images/bgWhatsapp.webp');
+}
+
+.bg-review {
+    background-image: url('images/bgReview.webp');
+}
+
+.bg-franquicia {
+    background-image: url('images/bgFranquicia.webp');
+}
+
+.bg-redes {
+    background-image: url('images/bgRedes.webp');
+}
+
+.top-empanadas,
+.bot-empanadas,
+.bg-whatsapp,
+.bg-review,
+.bg-franquicia,
+.bg-redes {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 26.04%;
+    min-width: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cards */
+.card {
+    position: relative;
+    overflow: hidden;
+    }
+
+.transparent-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+}
+
+.hidden-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.review-card {
+    background-color: rgba(27, 27, 27, 0.8);
+    border-color: #da5626;
+    color: white;
+}
+
+.franquicia-card {
+    max-width: 24rem;
+}
+
+.card img.front-image {
+    transition: transform 0.5s ease;
+}
+
+.card .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card:hover img.front-image,
+.card:active img.front-image,
+.card.touched img.front-image {
+    transform: scale(1);
+}
+
+.card:hover .back-image,
+.card:active .back-image,
+.card.touched .back-image {
+    opacity: 1;
+}
+
+.msg-carousel {
+    color: white;
+    max-width: 24rem;
+}
+
+.card-title {
+    color: white;
+}
+
+/* Size */
+.review-name,
+.review-brand {
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    max-width: 100%;
+}
+
+@media (max-width: 320px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .paragraph-sn {
+        font-size: 14px;
+    }
+
+    .msg-carousel {
+        font-size: 14px;
+    }
+
+    .review-profile {
+        width: 32px; 
+        height: 32px;
+    }
+
+    .review-name {
+        font-size: 14px;
+    }
+
+    .review-brand {
+        font-size: 12px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 540px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .paragraph-sn {
+        font-size: 16px;
+    }
+
+    .msg-carousel {
+        font-size: 14px;
+    }
+
+    .review-profile {
+        width: 32px; 
+        height: 32px;
+    }
+
+    .review-name {
+        font-size: 14px;
+    }
+
+    .review-brand {
+        font-size: 12px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 768px) {
+    .card-title {
+        font-size: 20px;
+    }
+
+    .paragraph-sn {
+        font-size: 18px;
+    }
+
+    .msg-carousel {
+        font-size: 16px;
+    }
+
+    .review-profile {
+        width: 32px; 
+        height: 32px;
+    }
+
+    .review-name {
+        font-size: 14px;
+    }
+
+    .review-brand {
+        font-size: 12px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+  }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-title {
+        font-size: 20px;
+    }
+
+    .paragraph-sn {
+        font-size: 16px;
+    }
+
+    .msg-carousel {
+        font-size: 18px;
+    }
+
+    .review-profile {
+        width: 36px; 
+        height: 36px;
+    }
+
+    .review-name {
+        font-size: 16px;
+    }
+
+    .review-brand {
+        font-size: 14px;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .paragraph-sn {
+        font-size: 16px;
+    }
+
+    .msg-carousel {
+        font-size: 18px;
+    }
+
+    .review-profile {
+        width: 40px; 
+        height: 40px;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .paragraph-sn {
+        font-size: 20px;
+    }
+
+    .msg-carousel {
+        font-size: 20px;
+    }
+    .review-profile {
+        width: 48px; 
+        height: 48px;
+    }
+
+    .text-whatsapp {
+        font-size: 48px;
+    }
+
+    .text-whatsapp-mini {
+        font-size: 32px;
+    }
+
+    .whatsapp-button {
+        font-size: 32px;
+    }
+
+    .whatsapp-button-icon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .title-franquicia {
+        font-size: 40px;
+    }
+
+    .text-franquicia {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .paragraph-sn {
+        font-size: 26px;
+    }
+
+    .msg-carousel {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    .review-profile {
+        width: 48px; 
+        height: 48px;
+    }
+
+    .text-whatsapp {
+        font-size: 64px;
+    }
+
+    .text-whatsapp-mini {
+        font-size: 48px;
+    }
+
+    .text-franquicia {
+        font-size: 28px;
+    }
+}
+
+/* anchor-offset */
+@media (max-width: 991px) {
+    .anchor-offset {
+        scroll-margin: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .anchor-offset {
+        scroll-margin: 90px;
+    }
+}
+
+
+/* SNOWFLAKES */
+#snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    background-size: contain;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(calc(var(--rotation)));
+    }
+}
