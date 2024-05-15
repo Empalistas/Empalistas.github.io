@@ -246,6 +246,10 @@ h1 {
     .review-text {
         font-size: 14px;
     }
+
+    .post-fp {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 540px) {
@@ -276,6 +280,10 @@ h1 {
 
     .review-text {
         font-size: 14px;
+    }
+
+    .post-fp {
+        font-size: 12px;
     }
 }
 
