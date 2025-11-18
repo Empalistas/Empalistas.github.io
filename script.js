@@ -76,7 +76,7 @@ const interval = setInterval(() => {
 
 // Botón WhatsApp
 function sendMessage(element) {
-    const phoneNumber = "5493513497315";
+    const phoneNumber = "5493512895876";
     let isMobile;
     let text;
 
@@ -92,6 +92,31 @@ function sendMessage(element) {
     } else {
         text = "¡Hola! Estuve visitando su página web, y estoy interesado en los productos que tiene en la venta. ¿Podrías darme más información?";
     }
+
+    let url;
+    if (isMobile) {
+        url = `whatsapp://send?text=${text}&phone=${phoneNumber}`;
+    } else {
+        url = `https://api.whatsapp.com/send?text=${text}&phone=${phoneNumber}`;
+    }
+
+    window.open(url, '_blank');
+}
+
+function sendFranquicia(element) {
+    const phoneNumber = "5493512127826";
+    let isMobile;
+    let text;
+
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes("mobile") || userAgent.includes("android")) {
+        isMobile = true
+    } else {
+        isMobile = false
+    }
+
+    text = "¡Hola! Estuve visitando su página web, y estoy interesado en los productos que tiene en la venta. ¿Podrías darme más información?";
+
 
     let url;
     if (isMobile) {

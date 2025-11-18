@@ -112,6 +112,10 @@ h1 {
     background-image: url('images/bgFranquicia.webp');
 }
 
+.bg-franquicia-nueva {
+    background-image: url('images/bgFranquiciaNueva.webp');
+}
+
 .bg-redes {
     background-image: url('images/bgRedes.webp');
 }
@@ -121,6 +125,7 @@ h1 {
 .bg-whatsapp,
 .bg-review,
 .bg-franquicia,
+.bg-franquicia-nueva,
 .bg-redes {
     background-size: cover;
     background-position: center center;
